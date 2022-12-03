@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+    a { 
+    color: hsl(228, 45%, 44%);
+    }
+} 
+
+body {
+    background: hsl(0, 0%, 100%);
+    .card {
+        background: hsl(30, 38%, 92%);
+        height:0.7*1440px;
+        width:1.2*1440px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cont{ 
+        border-radius: 15px;
+        display: flex;
+        width: 0.45*1440px;
+        height: 0.3*1440px;
+        overflow: hidden;
+        background-color: hsl(0, 0%, 100%);
+        .img {
+            background: url("images/image-product-desktop.jpg");
+            height: 0.3*1440px;
+            width: 50%;
+            
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+
+        .product-dsc{
+            width: 50%;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            #perfume {
+                letter-spacing: 5px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+            }
+
+            
+
+            h1{
+                
+                position: relative;
+                top: 0.05*0.3*1440px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 28px;
+            }
+
+            b {
+                position: relative;
+                top: 0.16*0.3*1440px;
+                font-family: 'Fraunces', serif;
+                font-size: 28px;
+                color: hsl(158, 36%, 37%);
+                margin: {
+                    right: 10px
+                };
+            }
+
+            s {
+                position: relative;
+                top: 0.15*0.3*1440px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                
+            }
+
+            button{
+                cursor: pointer;
+                position: relative;
+                top: 0.16*0.3*1440px;
+                height: 50px;
+                width: 100%;
+                border: none;
+                border-radius: 10px;
+                background: hsl(158, 36%, 37%);
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                
+                font-family: 'Fraunces', serif;
+                color: hsl(0, 0%, 100%);
+                &:hover {
+                    background: hsl(158, 36%, 25%);           
+                }
+
+            }
+
+            .description {
+                position: relative;
+                top: 0.1*0.3*1440px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+    }
+        
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        .card {
+            width: 375px;
+            height: 375px * 1.8;
+            margin: auto;
+            .cont {
+                position: relative;
+                margin: 20px;
+                width: 375px;
+                height: 375px*1.7;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                .img{
+                    background: url("images/image-product-mobile.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    width: 120%;
+                    height: 0.9*375px;
+                }
+
+                .product-dsc {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    #perfume {
+                        position: relative;
+                        top: -40px;
+                    }
+
+                    h1 {
+                        position: relative;
+                        top: -35px;
+                        font-size: 25px;
+                    }
+
+                    .description {
+                        position: relative;
+                        top: -15px;
+                    }
+
+                    b {
+                        position: relative;
+                        top: 20px;
+                    }
+
+                    s {
+                        position: relative;
+                        top: 18px;
+                    }
+
+                    button {
+                        position: relative;
+                        top: 25px;
+                    }
+                }
+
+                
+            }
+        }
+    }   
+}
